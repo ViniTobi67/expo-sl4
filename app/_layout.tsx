@@ -1,19 +1,17 @@
-import { Stack } from "expo-router";
-import { StatusBar } from "expo-status-bar";
+import { Stack } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
 
 export const unstable_settings = {
-  anchor: "(tabs)",
+  anchor: '(tabs)',
 };
 
 export default function RootLayout() {
+
   return (
     <>
       <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen
-          name="(tabs)"
-          options={{ headerShown: true, headerTitle: "Sair" }}
-        />
+        <Stack.Screen name='index' options={{headerShown: false}}/>
+        <Stack.Screen name='(tabs)' options={{ headerShown: true, headerTitle: 'Sair' }} />
       </Stack>
       <StatusBar style="auto" />
     </>
