@@ -1,14 +1,13 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-// import { router } from 'expo-router';
-import { useState } from 'react';
 import { router } from 'expo-router';
+import { useState } from 'react';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function Home() {
 
   const [email, setEmail] = useState('')
   const [pass, setPass] = useState('')
 
-  const VaiPraIndexDasTabs = () => {
+  const vaiPraIndexDasTabs = () => {
     router.push('/(tabs)')
   }
 
@@ -19,9 +18,9 @@ export default function Home() {
         <Text style={s.t}>Email</Text>
         <TextInput style={s.input} onChangeText={setEmail} value={email} placeholder='Insira seu email'/>
         <Text style={s.t}>Senha</Text>
-        <TextInput style={s.input} onChangeText={setPass} value={pass} placeholder='Insira sua senha'/>
+        <TextInput style={s.input} onChangeText={setPass} value={pass} placeholder='Insira sua senha' />
         <View>
-          <TouchableOpacity style={s.button} onPress={VaiPraIndexDasTabs}>
+          <TouchableOpacity style={s.button} onPress={vaiPraIndexDasTabs}>
             <Text style={s.btnText}>ENTRAR</Text>
           </TouchableOpacity>
         </View>
@@ -83,8 +82,8 @@ const s = StyleSheet.create({
   },
 
   btnText: {
-    textAlign: 'center',
-    fontSize: 18,
-    fontWeight: 600
+      textAlign: 'center',
+      fontSize: 18,
+      fontWeight: 600
   }
 });
